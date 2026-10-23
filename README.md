@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Komma Shanthi Vardhan - Personal Portfolio (React + Vite)
 
 A modern, responsive, and minimalist developer portfolio web application built with **React** and **Vite** for **Komma Shanthi Vardhan**, a 3rd-year B.Tech Computer Science and Engineering (Data Science) student at Vardhaman College of Engineering.
@@ -63,4 +63,4 @@ npm run preview
 ```
 =======
 # Portfolio
->>>>>>> 365390a50839595744611abca2e7055bb6ddb2d3
+
