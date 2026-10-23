@@ -1,0 +1,236 @@
+/* ===================================================================
+   KOMMA SHANTHI VARDHAN - PORTFOLIO DESIGN SYSTEM
+   Palette: Mocha Brown, Platinum Silver, Pale Lavender
+   =================================================================== */
+
+:root {
+  /* Mocha Brown Spectrum */
+  --mocha-darkest: #120c0a;
+  --mocha-dark: #18110f;
+  --mocha-surface: #221815;
+  --mocha-surface-elevated: #2e201c;
+  --mocha-surface-hover: #3b2a25;
+  --mocha-card-bg: rgba(34, 24, 21, 0.78);
+  --mocha-card-hover: rgba(48, 34, 30, 0.88);
+  --mocha-accent: #c49a88;
+  --mocha-subtle: rgba(196, 154, 136, 0.14);
+
+  /* Platinum Silver Spectrum */
+  --plat-bright: #f8fafc;
+  --plat-light: #f1f5f9;
+  --plat-silver: #e2e8f0;
+  --plat-mid: #cbd5e1;
+  --plat-muted: #94a3b8;
+  --plat-dark: #64748b;
+  --plat-border: rgba(226, 232, 240, 0.14);
+  --plat-border-hover: rgba(226, 232, 240, 0.35);
+
+  /* Pale Lavender Spectrum */
+  --lavender-pale: #f3e8ff;
+  --lavender-light: #ede9fe;
+  --lavender-accent: #d8b4fe;
+  --lavender-glow: rgba(216, 180, 254, 0.28);
+  --lavender-subtle: rgba(216, 180, 254, 0.12);
+  --lavender-border: rgba(216, 180, 254, 0.32);
+  --lavender-vibrant: #c084fc;
+  --lavender-deep: #a855f7;
+
+  /* Composite Gradients */
+  --grad-primary: linear-gradient(135deg, #f1f5f9 0%, #d8b4fe 55%, #c084fc 100%);
+  --grad-platinum: linear-gradient(135deg, #ffffff 0%, #e2e8f0 40%, #cbd5e1 80%, #94a3b8 100%);
+  --grad-mocha-lavender: linear-gradient(135deg, #d8b4fe 0%, #f1f5f9 45%, #c49a88 100%);
+  --grad-card: linear-gradient(180deg, rgba(38, 27, 24, 0.85) 0%, rgba(20, 14, 12, 0.9) 100%);
+
+  /* Typography */
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 40px -12px rgba(10, 6, 5, 0.85);
+  --shadow-lavender-glow: 0 0 30px rgba(216, 180, 254, 0.22);
+  --shadow-mocha-glow: 0 0 30px rgba(196, 154, 136, 0.18);
+
+  /* Layout */
+  --max-width: 1200px;
+  --header-height: 76px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--mocha-darkest);
+  color: var(--plat-silver);
+  line-height: 1.65;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+input, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--mocha-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--mocha-surface-elevated);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--mocha-dark);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--lavender-border);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Section Common */
+.section {
+  padding: 6.5rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title-wrap {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.section-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--lavender-pale);
+  background: var(--lavender-subtle);
+  border: 1px solid var(--lavender-border);
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--plat-bright);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.heading-line {
+  width: 60px;
+  height: 3px;
+  background: var(--grad-primary);
+  margin: 1.25rem auto;
+  border-radius: var(--radius-full);
+}
+
+.section-subtitle {
+  color: var(--plat-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Common Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--grad-primary);
+  color: #140e0c;
+  box-shadow: 0 4px 20px rgba(216, 180, 254, 0.28);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 26px rgba(216, 180, 254, 0.45);
+  color: #0d0908;
+}
+
+.btn-outline {
+  background: rgba(45, 31, 27, 0.5);
+  border-color: var(--plat-border);
+  color: var(--plat-silver);
+  backdrop-filter: blur(8px);
+}
+
+.btn-outline:hover {
+  background: var(--lavender-subtle);
+  border-color: var(--lavender-accent);
+  color: var(--lavender-pale);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+}
