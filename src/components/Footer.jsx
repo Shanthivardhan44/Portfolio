@@ -1,6 +1,6 @@
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
+const CURRENT_YEAR = 2026;
 
+export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -16,7 +16,7 @@ export default function Footer() {
               <span className="logo-bracket">/&gt;</span>
             </a>
             <p className="footer-tagline">
-              Aspiring Data Analyst | Data Science Enthusiast | Web Developer
+              Aspiring Data Scientist | Full-Stack Web Developer | Problem Solver
             </p>
             <p className="footer-college">
               Vardhaman College of Engineering • B.Tech CSE (Data Science)
@@ -29,15 +29,16 @@ export default function Footer() {
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About Me</a></li>
               <li><a href="#skills">Skills</a></li>
+              <li><a href="#experience">Experience</a></li>
               <li><a href="#projects">Projects</a></li>
-              <li><a href="#strengths">Strengths &amp; Interests</a></li>
+              <li><a href="#strengths">Strengths &amp; Passions</a></li>
               <li><a href="#education">Education</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
 
           <div className="footer-socials-group">
-            <span className="footer-heading">Connect</span>
+            <span className="footer-heading">Connect Directly</span>
             <div className="footer-social-links">
               <a
                 href="https://github.com/Shanthivardhan44"
@@ -66,7 +67,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Komma Shanthi Vardhan. All rights reserved.</p>
+          <p>&copy; {CURRENT_YEAR} Komma Shanthi Vardhan. Engineered with React, Three.js &amp; Framer Motion.</p>
           <button
             type="button"
             onClick={scrollToTop}
@@ -74,7 +75,7 @@ export default function Footer() {
             aria-label="Back to top"
           >
             <span>Back to Top</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <polyline points="18 15 12 9 6 15" />
             </svg>
           </button>

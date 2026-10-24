@@ -7,9 +7,9 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
+      setIsScrolled(window.scrollY > 30);
 
-      const sections = ['home', 'about', 'skills', 'projects', 'strengths', 'education', 'contact'];
+      const sections = ['home', 'about', 'skills', 'experience', 'projects', 'strengths', 'education', 'contact'];
       const scrollPosition = window.scrollY + 180;
 
       for (const sectionId of sections) {
@@ -25,7 +25,7 @@ export default function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -33,8 +33,9 @@ export default function Navbar() {
     { label: 'Home', href: '#home', id: 'home' },
     { label: 'About', href: '#about', id: 'about' },
     { label: 'Skills', href: '#skills', id: 'skills' },
+    { label: 'Experience', href: '#experience', id: 'experience' },
     { label: 'Projects', href: '#projects', id: 'projects' },
-    { label: 'Strengths & Interests', href: '#strengths', id: 'strengths' },
+    { label: 'Strengths', href: '#strengths', id: 'strengths' },
     { label: 'Education', href: '#education', id: 'education' },
   ];
 
@@ -65,7 +66,7 @@ export default function Navbar() {
           ))}
           <li>
             <a href="#contact" className="nav-link btn-nav">
-              Contact
+              Connect
             </a>
           </li>
         </ul>
@@ -98,7 +99,7 @@ export default function Navbar() {
             ))}
             <li>
               <a href="#contact" className="btn btn-primary btn-mobile-cta" onClick={handleLinkClick}>
-                Contact Me
+                Connect With Me
               </a>
             </li>
           </ul>
